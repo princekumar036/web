@@ -17,6 +17,18 @@ header {
     padding: 2em 0;
 }
 
+.container {
+    width: 90%;
+    max-width: 900px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    border: solid 1px black;
+}
+
 .title {
     font-family: "Lora", serif;
     font-weight: 400;
@@ -37,17 +49,16 @@ nav {
     color: #707070;
     text-transform: uppercase;
 
-    margin-top: 2em;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 nav li {
     list-style: none;
-    margin: 0 1em;
+    margin-left: 2em;
 }
 
 nav a {
@@ -67,4 +78,16 @@ nav a:focus {
 
 .current-page:hover {
     color: #707070;
+}
+
+@media screen and (max-width: 765px) {
+    .container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.5em 0;
+    }
 }
